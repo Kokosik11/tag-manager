@@ -1,12 +1,11 @@
 class TagList {
     tags = [];
     state = { readonly: false };
-    localData = JSON.parse(localStorage.getItem("data"));
     tagListDOM = document.querySelector('.tag-list');
     readonlyEvent = new Event("readonly", { bubbles: true });
 
     constructor(tags = []) {
-        this.tags = this.localData.tags || tags;
+        this.tags = JSON.parse(localStorage.getItem("data")) || tags;
         
         if(this.tags > 15) this.readOnly = true;
 
@@ -39,9 +38,7 @@ class TagList {
     }
 
     toLocalStorage = () => {
-        let data = {
-            tags: this.tags,
-        }
+        let data = this.tags
         localStorage.setItem("data", JSON.stringify(data));
     }
 
