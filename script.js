@@ -6,7 +6,6 @@ class TagList {
 
     constructor(tags = []) {
         this.tags = JSON.parse(localStorage.getItem("data")) || tags;
-        
         if(this.tags > 15) this.readOnly = true;
 
         this.render();
@@ -24,7 +23,6 @@ class TagList {
         if(this.tags.length > 15) this.readOnly = true;
         else {
             this.tags.push(value);
-            console.log(this.tags);
             this.render();
             this.toLocalStorage();
         }
