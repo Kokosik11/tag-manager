@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+}
+
+body {
+    background-image: url('./img/bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    margin: 50px auto;
+}
+
+.tools {
+    display: flex;
+    background: #8EB0F1;
+    height: 50px;
+    opacity: 0.8;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.tag-input {
+    background: none;
+    width: 237px;
+    border-style: none;
+    padding: 0 43px;
+    outline: none;
+    font-size: 18px;
+    color: #3C68BB;
+    transition: .25s;
+}
+
+.tag-input::placeholder {
+    color: #6D92D6;
+}
+
+.tag-input:hover::placeholder, .tag-input:focus::placeholder {
+    color: #3C68BB;
+    transition: .25s;
+}
+
+.tag-btn {
+    background: #6E97E4;
+    height: 30px;
+    width: 50px;
+    border-radius: 12px;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 43px;
+    color: #8EB0F1;
+    font-size: 16px;
+    transition: .25s;
+}
+
+.tag-btn:hover {
+    background-color: #3C68BB;
+    transition: .25s;
+}
+
+.unactive, .unactive:hover {
+    background-color: #7591C8;
+}
+
+.tag-input:read-only::placeholder {
+    color: #7591C8;
+}
+
+.tag-content {
+    display: flex;
+    flex-direction: column;
+    background: #8EB0F1;
+    margin: 15px 0;
+    opacity: 0.8;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.tag-heading {
+    color: white;
+    font-weight: 500;
+    /* text-align: center; */
+    padding: 15px 0;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 250px;
+    padding-bottom: 45px;
+
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 5px 5px;
+    font-weight: 500;
+    background: #6E97E4;
+    border-radius: 10px;
+    color: #3C68BB;
+    font-size: 14px;
+}
+
+.delete {
+    color: #8EB0F1;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.delete:hover {
+    color: #4c6797;
+    transition: .25s;
+}
